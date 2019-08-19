@@ -1,0 +1,158 @@
+.header 
+  &__wrap 
+    max-width: 1400px
+    min-height: 220px
+    margin: 0 auto
+    padding-top: 35px;
+    background: url('../img/header/header-bg.jpg') center no-repeat;
+    background-size: cover
+  &-logo
+    display: flex
+    flex-direction: column
+    margin-right: 110px
+    &__link
+      margin-bottom: 15px
+    &__description
+      max-width: 185px
+      color: $text-color2
+      +medium
+      font-size: 12px
+      line-height: 17.46px
+  &-top
+    display: flex
+    justify-content: flex-start
+    &__menu
+      margin-right: 350px
+    &__links
+      display: none
+    &__icon
+      display: inline-block
+      width: 14px
+      height: 10px
+      position: relative
+      cursor: pointer
+      span 
+        display: block
+        position: absolute
+        height: 2px
+        width: 100%
+        background: $light-color
+        border-radius: 9px
+        opacity: 1
+        left: 0
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        &:nth-child(1)
+          top: 0
+        &:nth-child(2), &:nth-child(3)
+          top: 4px
+        &:nth-child(4)
+          top: 8px
+    &__list
+      &_open
+        .header-top__links
+          display: block
+        /* Преобразуется в крестик при нажатии на меню */
+        .header-top__icon
+          span
+            &:nth-child(1)
+              top: 18px
+              width: 0%
+              left: 50%
+            &:nth-child(2)
+              transform: rotate(45deg)
+            &:nth-child(3)
+              transform: rotate(-45deg)
+            &:nth-child(4)
+              top: 18px
+              width: 0%
+              left: 50%
+    &__nav
+      display: flex
+      justify-content: space-between
+      margin-bottom: 28px
+    &__item
+      display: flex
+      align-items: center
+      &s
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 520px
+      &-link
+        font-size: 12px
+        color: $light-color
+        +medium
+        line-height: 18px
+        letter-spacing: 0.24px
+        position: relative
+        display: flex
+        align-items: center
+      &-image
+        margin-right: 11px
+    &__search
+      position: relative
+      &-text
+        width: 100%
+        height: 55px
+        padding: 15px
+        border-radius: 4px
+        border: 1px solid #edeef3
+        background-color: $light-color
+        font-size: 12px
+        &::-webkit-input-placeholder
+          color: transparent
+          text-indent: -9999px
+          background-image: url("../img/header/magnifier.png")
+          background-position: 0 0 
+          background-repeat: no-repeat
+        &::-moz-placeholder
+          color: transparent
+          text-indent: -9999px
+          background-image: url("../img/header/magnifier.png")
+          background-position: 0 0 
+          background-repeat: no-repeat
+        &:-moz-placeholder
+          color: transparent
+          text-indent: -9999px
+          background-image: url("../img/header/magnifier.png")
+          background-position: 0 0 
+          background-repeat: no-repeat
+        &:-ms-input-placeholder
+          color: transparent
+          text-indent: -9999px
+          background-image: url("../img/header/magnifier.png")
+          background-position: 0 0 
+          background-repeat: no-repeat
+        &::-ms-input-placeholder
+          color: transparent
+          text-indent: -9999px
+          background-image: url("../img/header/magnifier.png")
+          background-position: 0 0 
+          background-repeat: no-repeat
+        &:focus::-webkit-input-placeholder
+          background: none
+        &:focus::-moz-placeholder
+          background: none
+        &:focus:-moz-placeholder
+          background: none
+        &:focus:-ms-input-placeholder
+          background: none
+        &:focus::-ms-input-placeholder
+          background: none
+      &-btn
+        position: absolute
+        top: 50%
+        right: 12px
+        border: none
+        background-color: transparent
+        color: #1359fc
+        +semibold
+        font-size: 12px
+        line-height: 25px
+        text-transform: uppercase
+        letter-spacing: 0.72px
+        transform: translateY(-50%)
+        cursor: pointer
+        
+

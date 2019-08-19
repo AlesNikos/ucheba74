@@ -429,6 +429,7 @@ h1, h2, h3, h4 {
 .header__wrap {
   max-width: 1400px;
   min-height: 220px;
+  position: relative;
   margin: 0 auto;
   padding-top: 35px;
   background: url("../img/header/header-bg.jpg") center no-repeat;
@@ -443,7 +444,7 @@ h1, h2, h3, h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 110px;
+  margin-right: 119px;
 }
 
 .header-logo__link {
@@ -596,7 +597,7 @@ h1, h2, h3, h4 {
 }
 
 .header-top__search-text {
-  width: 100%;
+  width: 900px;
   height: 55px;
   padding: 15px;
   border-radius: 4px;
@@ -617,7 +618,7 @@ h1, h2, h3, h4 {
   color: transparent;
   text-indent: -9999px;
   background-image: url("../img/header/magnifier.png");
-  background-position: 0 0;
+  background-position: 15px 19px;
   background-repeat: no-repeat;
 }
 
@@ -625,7 +626,7 @@ h1, h2, h3, h4 {
   color: transparent;
   text-indent: -9999px;
   background-image: url("../img/header/magnifier.png");
-  background-position: 0 0;
+  background-position: 15px 19px;
   background-repeat: no-repeat;
 }
 
@@ -633,7 +634,7 @@ h1, h2, h3, h4 {
   color: transparent;
   text-indent: -9999px;
   background-image: url("../img/header/magnifier.png");
-  background-position: 0 0;
+  background-position: 15px 19px;
   background-repeat: no-repeat;
 }
 
@@ -641,7 +642,7 @@ h1, h2, h3, h4 {
   color: transparent;
   text-indent: -9999px;
   background-image: url("../img/header/magnifier.png");
-  background-position: 0 0;
+  background-position: 15px 19px;
   background-repeat: no-repeat;
 }
 
@@ -680,4 +681,119 @@ h1, h2, h3, h4 {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   cursor: pointer;
+}
+
+.header-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: -51px;
+  height: 100px;
+  -webkit-box-shadow: 0 2px 1px rgba(222, 225, 227, 0.29), 0 -2px 18px rgba(222, 225, 227, 0.29);
+          box-shadow: 0 2px 1px rgba(222, 225, 227, 0.29), 0 -2px 18px rgba(222, 225, 227, 0.29);
+  border-radius: 5px;
+  border: 1px solid #edeef3;
+  background-color: #ffffff;
+}
+
+.header-bottom__item {
+  position: relative;
+}
+
+.header-bottom__item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100px;
+  background-color: #edeef3;
+}
+
+.header-bottom__item:nth-child(1)::after {
+  display: none;
+}
+
+.header-bottom__link {
+  display: inline-block;
+  width: 239px;
+  height: 100px;
+}
+
+.header-bottom__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 28px;
+  padding-left: 40px;
+}
+
+.header-bottom__image {
+  margin-right: 20px;
+}
+
+.header-bottom__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-bottom__text-name {
+  margin-bottom: 6px;
+  color: #11223e;
+  font-size: 14px;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.header-bottom__text-count {
+  color: #8995a1;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.31px;
+  font-family: 'Montserrat Medium', sans-serif;
+}
+
+.header-bottom__text-count::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-bottom__text-count_1:before {
+  background-color: #04b5ff;
+}
+
+.header-bottom__text-count_2:before {
+  background-color: #f7ac0c;
+}
+
+.header-bottom__text-count_3:before {
+  background-color: #00bf51;
+}
+
+.header-bottom__text-count_4:before {
+  background-color: #ff5f27;
+}
+
+.header-bottom__text-count_5:before {
+  background-color: #9976ff;
 }

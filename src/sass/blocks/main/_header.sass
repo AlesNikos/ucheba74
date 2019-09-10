@@ -1,7 +1,7 @@
 .header 
   &__wrap 
     max-width: 1400px
-    min-height: 220px
+    min-height: 219px
     position: relative
     margin: 0 auto
     padding-top: 35px;
@@ -10,9 +10,11 @@
   &-logo
     display: flex
     flex-direction: column
-    margin-right: 119px
+    margin-left: 10px
+    margin-top: 5px
+    margin-right: 108px
     &__link
-      margin-bottom: 15px
+      margin-bottom: 9px
     &__description
       max-width: 185px
       color: $text-color2
@@ -32,10 +34,9 @@
       position: absolute
       top: 27px
       left: 0
-      right: 0
+      // right: 0
       width: 289px
       height: 319px
-      // padding: 20px 30px
       box-shadow: 0 7px 24px rgba(30, 42, 62, 0.15)
       border-radius: 4px
       border: 1px solid #edeef3
@@ -87,6 +88,8 @@
           top: 4px
         &:nth-child(4)
           top: 8px
+    &__right 
+      max-width: 897px
     &__list
       &_open
         .header-top__links
@@ -109,15 +112,19 @@
     &__nav
       display: flex
       justify-content: space-between
-      margin-bottom: 28px
+      margin-bottom: 27px
+      margin-top: -4px
     &__item
       display: flex
       align-items: center
+      &:nth-child(1) 
+        margin-right: 9px
       &s
         display: flex
         justify-content: space-between
         align-items: center
         width: 520px
+        margin-right: 11px
       &-link
         font-size: 12px
         color: $light-color
@@ -144,9 +151,10 @@
     &__search
       position: relative
       &-text
-        width: 900px
+        width: 897px
         height: 55px
         padding: 15px
+        padding-left: 20px
         border-radius: 4px
         border: 1px solid #edeef3
         background-color: $light-color
@@ -194,7 +202,7 @@
       &-btn
         position: absolute
         top: 50%
-        right: 12px
+        right: 15px
         border: none
         background-color: transparent
         color: #1359fc
@@ -210,7 +218,8 @@
     justify-content: space-around
     align-items: center
     position: absolute
-    bottom: -51px
+    bottom: -52px
+    width: 1200px
     height: 100px
     box-shadow: 0 2px 1px rgba(222, 225, 227, 0.29), 0 -2px 18px rgba(222, 225, 227, 0.29)
     border-radius: 5px
@@ -272,3 +281,143 @@
         &_5:before
           background-color: #9976ff
 
+@media (max-width: 1280px) 
+  .header
+    &-logo
+      margin-left: 30px
+    &-top
+      &__icon
+        width: 20px
+        height: 15px
+        span
+          height: 3px
+          &:nth-child(1)
+            top: 0
+          &:nth-child(2), &:nth-child(3)
+            top: 6px
+          &:nth-child(4)
+            top: 12px
+      &__right
+        max-width: 643px
+      &__item
+        &:nth-child(1)
+          display: none
+      &__search
+        &-text
+          width: 100%
+    &-bottom
+      width: 1001px
+      &__item 
+        &:nth-child(4)
+          .header-bottom__block
+            padding-left: 20px
+      &__link
+        width: 200px
+
+@media (max-width: 1023px)
+  .header
+    .container
+      width: 768px
+    &__wrap
+      min-height: 200px
+      padding-top: 25px
+      background: none
+      background-color:#1e2a3e
+    &-logo
+      margin-left: 10px
+      margin-right: 40px
+      margin-top: 0
+    &-top
+      &__right
+        width: 520px
+      &__menu
+        margin-right: 220px
+      &__items
+        max-width: 254px
+        margin-right: 0
+      &__link
+        min-height: 28px
+        font-size: 12px
+        &::after
+          width: 223px
+        &s
+          width: 249px;
+          height: 268px;
+    &-bottom
+      bottom: -15px
+      width: 768px
+      height: 69px
+      &__item
+        &:after
+          height: 69px
+        &:nth-child(1)
+          .header-bottom__text
+            &::before
+              content: ''
+              background: url('../img/header/image-1.png') center no-repeat
+              background-size: contain
+        &:nth-child(2)
+          .header-bottom__text
+            &::before
+              content: ''
+              background: url('../img/header/image-2.png') center no-repeat
+              background-size: contain
+        &:nth-child(3)
+          .header-bottom__text
+            &::before
+              content: ''
+              background: url('../img/header/image-3.png') center no-repeat
+              background-size: contain
+        &:nth-child(4)
+          .header-bottom__text
+            &::before
+              content: ''
+              position: relative
+              top: -4px
+              background: url('../img/header/image-4.png') center no-repeat
+              background-size: contain
+        &:nth-child(5)
+          .header-bottom__text
+            &::before
+              content: ''
+              background: url('../img/header/image-5.png') center no-repeat
+              background-size: contain
+      &__link
+        width: 153px
+        height: 69px
+      &__block
+        padding-top: 20px
+        padding-left: 23px
+      &__text
+        flex-direction: row
+        align-items: center
+        &::before
+          content: ''
+          width: 27px
+          height: 27px
+          margin-right: 13px
+        &-count
+          display: none
+      &__image
+        display: none
+
+@media (max-width: 767px)
+  .header
+    .container
+      width: 540px
+    &-logo
+      &__description
+        display: none
+    &-top
+      justify-content: space-between
+      &__links
+        left: auto
+        right: 0
+      &__right
+        max-width: 20px
+      &__nav
+        margin-top: 0
+      &__items
+        display: none
+      &__search
+        display: none

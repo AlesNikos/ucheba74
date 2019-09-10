@@ -403,17 +403,17 @@ h1, h2, h3, h4 {
 
 @media (max-width: 1280px) {
   .container {
-    width: 960px;
+    width: 1001px;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1023px) {
   .container {
-    width: 720px;
+    width: 745px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     width: 540px;
   }
@@ -428,7 +428,7 @@ h1, h2, h3, h4 {
 /* Подключение стилей для главной страницы */
 .header__wrap {
   max-width: 1400px;
-  min-height: 220px;
+  min-height: 219px;
   position: relative;
   margin: 0 auto;
   padding-top: 35px;
@@ -444,11 +444,13 @@ h1, h2, h3, h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 119px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 108px;
 }
 
 .header-logo__link {
-  margin-bottom: 15px;
+  margin-bottom: 9px;
 }
 
 .header-logo__description {
@@ -485,7 +487,6 @@ h1, h2, h3, h4 {
   position: absolute;
   top: 27px;
   left: 0;
-  right: 0;
   width: 289px;
   height: 319px;
   -webkit-box-shadow: 0 7px 24px rgba(30, 42, 62, 0.15);
@@ -561,6 +562,10 @@ h1, h2, h3, h4 {
   top: 8px;
 }
 
+.header-top__right {
+  max-width: 897px;
+}
+
 .header-top__list_open {
   /* Преобразуется в крестик при нажатии на меню */
 }
@@ -600,7 +605,8 @@ h1, h2, h3, h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
+  margin-top: -4px;
 }
 
 .header-top__item {
@@ -610,6 +616,10 @@ h1, h2, h3, h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header-top__item:nth-child(1) {
+  margin-right: 9px;
 }
 
 .header-top__items {
@@ -623,6 +633,7 @@ h1, h2, h3, h4 {
       -ms-flex-align: center;
           align-items: center;
   width: 520px;
+  margin-right: 11px;
 }
 
 .header-top__item-link {
@@ -661,9 +672,10 @@ h1, h2, h3, h4 {
 }
 
 .header-top__search-text {
-  width: 900px;
+  width: 897px;
   height: 55px;
   padding: 15px;
+  padding-left: 20px;
   border-radius: 4px;
   border: 1px solid #edeef3;
   background-color: #ffffff;
@@ -733,7 +745,7 @@ h1, h2, h3, h4 {
 .header-top__search-btn {
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 15px;
   border: none;
   background-color: transparent;
   color: #1359fc;
@@ -757,7 +769,8 @@ h1, h2, h3, h4 {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  bottom: -51px;
+  bottom: -52px;
+  width: 1200px;
   height: 100px;
   -webkit-box-shadow: 0 2px 1px rgba(222, 225, 227, 0.29), 0 -2px 18px rgba(222, 225, 227, 0.29);
           box-shadow: 0 2px 1px rgba(222, 225, 227, 0.29), 0 -2px 18px rgba(222, 225, 227, 0.29);
@@ -860,4 +873,176 @@ h1, h2, h3, h4 {
 
 .header-bottom__text-count_5:before {
   background-color: #9976ff;
+}
+
+@media (max-width: 1280px) {
+  .header-logo {
+    margin-left: 30px;
+  }
+  .header-top__icon {
+    width: 20px;
+    height: 15px;
+  }
+  .header-top__icon span {
+    height: 3px;
+  }
+  .header-top__icon span:nth-child(1) {
+    top: 0;
+  }
+  .header-top__icon span:nth-child(2), .header-top__icon span:nth-child(3) {
+    top: 6px;
+  }
+  .header-top__icon span:nth-child(4) {
+    top: 12px;
+  }
+  .header-top__right {
+    max-width: 643px;
+  }
+  .header-top__item:nth-child(1) {
+    display: none;
+  }
+  .header-top__search-text {
+    width: 100%;
+  }
+  .header-bottom {
+    width: 1001px;
+  }
+  .header-bottom__item:nth-child(4) .header-bottom__block {
+    padding-left: 20px;
+  }
+  .header-bottom__link {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header .container {
+    width: 768px;
+  }
+  .header__wrap {
+    min-height: 200px;
+    padding-top: 25px;
+    background: none;
+    background-color: #1e2a3e;
+  }
+  .header-logo {
+    margin-left: 10px;
+    margin-right: 40px;
+    margin-top: 0;
+  }
+  .header-top__right {
+    width: 520px;
+  }
+  .header-top__menu {
+    margin-right: 220px;
+  }
+  .header-top__items {
+    max-width: 254px;
+    margin-right: 0;
+  }
+  .header-top__link {
+    min-height: 28px;
+    font-size: 12px;
+  }
+  .header-top__link::after {
+    width: 223px;
+  }
+  .header-top__links {
+    width: 249px;
+    height: 268px;
+  }
+  .header-bottom {
+    bottom: -15px;
+    width: 768px;
+    height: 69px;
+  }
+  .header-bottom__item:after {
+    height: 69px;
+  }
+  .header-bottom__item:nth-child(1) .header-bottom__text::before {
+    content: '';
+    background: url("../img/header/image-1.png") center no-repeat;
+    background-size: contain;
+  }
+  .header-bottom__item:nth-child(2) .header-bottom__text::before {
+    content: '';
+    background: url("../img/header/image-2.png") center no-repeat;
+    background-size: contain;
+  }
+  .header-bottom__item:nth-child(3) .header-bottom__text::before {
+    content: '';
+    background: url("../img/header/image-3.png") center no-repeat;
+    background-size: contain;
+  }
+  .header-bottom__item:nth-child(4) .header-bottom__text::before {
+    content: '';
+    position: relative;
+    top: -4px;
+    background: url("../img/header/image-4.png") center no-repeat;
+    background-size: contain;
+  }
+  .header-bottom__item:nth-child(5) .header-bottom__text::before {
+    content: '';
+    background: url("../img/header/image-5.png") center no-repeat;
+    background-size: contain;
+  }
+  .header-bottom__link {
+    width: 153px;
+    height: 69px;
+  }
+  .header-bottom__block {
+    padding-top: 20px;
+    padding-left: 23px;
+  }
+  .header-bottom__text {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-bottom__text::before {
+    content: '';
+    width: 27px;
+    height: 27px;
+    margin-right: 13px;
+  }
+  .header-bottom__text-count {
+    display: none;
+  }
+  .header-bottom__image {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .container {
+    width: 540px;
+  }
+  .header-logo__description {
+    display: none;
+  }
+  .header-top {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header-top__links {
+    left: auto;
+    right: 0;
+  }
+  .header-top__right {
+    max-width: 20px;
+  }
+  .header-top__nav {
+    margin-top: 0;
+  }
+  .header-top__items {
+    display: none;
+  }
+  .header-top__search {
+    display: none;
+  }
 }
